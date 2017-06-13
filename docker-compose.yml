@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cmdb:
+    build:
+      context: ./
+      dockerfile: 'Dockerfile'
+    image: 'csnr/cmdb:latest'
+    environment:
+      ARANGO_ROOT_PASSWORD: 'r00t'
+    ports:
+      - "8529:8529"
+#    volumes:
+#      - /C_DRIVE:/var/source
+#volumes:
+#  source:
+#    external: true
